@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app="WebsocketClient">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport"
+          content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, target-densitydpi=device-dpi"/>
+
+    <link rel="stylesheet" type="text/css" href="css/app.css"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+    <!-- <link rel="stylesheet" type="text/css" href="css/slider.css"/> -->
+    <title>BBB Servo Web Client</title>
+</head>
+
+<body>
+<h2 class="text-center">UI Proto for MOOC</h2>
+<hr/>
+<section ng-controller="WebSocketController" class="text-center">
+    <strong ng-bind-template="Server Response: {{message}}"></strong>
+    <hr>
+    <iframe src="http://shindig2.epfl.ch/gadgets/ifr?url=http://graasp.epfl.ch/gadget/prod/sismondi/gadget.xml"
+    width="500" height="500"></iframe>
+    <hr>
+
+<!--     <div class="container">
+        <strong class="pad-right">Servo</strong>
+        <input type="text"
+               class="slider span2"
+               value=""
+               data-slider-min="2500"
+               data-slider-max="4800"
+               data-slider-step="100"
+               data-slider-value="2500"
+               data-slider-orientation="horizontal"
+               data-slider-selection="after"
+               data-slider-tooltip="hide" />
+        <strong class="pad-left" ng-bind='servoValue'></strong>
+    </div>  -->
+    
+<img id="img" src="http://localhost/mock.jpg" height="500" width="500" border="0">
+<!--<script>
+window.onload = function() {
+    setInterval(updateImage, 500);
+}
+
+var image = document.getElementById("img");
+
+function updateImage() {
+    image.src = image.src.split("?")[0] + "?" + new Date().getTime();
+}
+</script> -->
+
+<div class="container">
+    <button class="btn" ng-click="saveData()">
+        Save Data
+    </button>
+    <button class="btn" ng-click="sendData()">
+        Send Data
+    </button>
+</div>
+</section>
+
+<script type="text/javascript" src="js/lib/jquery.js"></script>
+<script type="text/javascript" src="js/lib/angular.js"></script>
+<script type="text/javascript" src="js/lib/bootstrap.js"></script>
+<script type="text/javascript" src="js/lib/modernizr-latest.js"></script>
+<!-- <script type="text/javascript" src="js/lib/bootstrap-slider.js"></script> -->
+<script type="text/javascript" src="js/app/web-socket-controller.js"></script>
+<script type="text/javascript" src="js/app/app.js"></script>
+<!-- scripts needed for Highcharts -->
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/modules/data.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+
+<!-- Additional files for the Highslide popup effect -->
+<script type="text/javascript" src="http://www.highcharts.com/media/com_demo/highslide-full.min.js"></script>
+<script type="text/javascript" src="http://www.highcharts.com/media/com_demo/highslide.config.js" charset="utf-8"></script>
+<link rel="stylesheet" type="text/css" href="http://www.highcharts.com/media/com_demo/highslide.css" />
+<!-- end -->
+
+</body>
+</html>
+
