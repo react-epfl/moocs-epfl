@@ -1,1 +1,3 @@
-In this repo, we gather code for the UI of LA-EPFL MOOCs on edX
+# moocs-epfl
+
+This repo hosts the UI for LA-EPFL MOOCs on edX
