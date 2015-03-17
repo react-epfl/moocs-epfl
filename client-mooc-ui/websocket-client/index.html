@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" type="text/css" href="css/app.css"/>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="css/slider.css"/>
     <title>Remote Lab Web Client Mock</title>
 </head>
 
@@ -18,10 +19,25 @@
 <section ng-controller="WebSocketController" class="text-center">
     <strong ng-bind-template="Lab Response: {{message}}"></strong>
     <hr>
-    <iframe src="http://localhost:8080/gadgets/ifr?nocache=1&url=http://iamac115.epfl.ch/untitled.xml"
-    width="1000" height="800" frameBorder="0"></iframe> 
+    <div class="container">
+    <strong class="pad-right">Slider</strong>
+    <input type="text"
+        class="slider span2"
+        value=""
+            data-slider-min="0"
+            data-slider-max="100"
+            data-slider-step="10"
+            data-slider-value="0"
+            data-slider-orientation="horizontal"
+            data-slider-selection="after"
+            data-slider-tooltip="hide" />
+    <strong class="pad-left" ng-bind='sliderValue'></strong>
+</div>
 
-<div class="containerr">
+    <iframe src="http://localhost:8080/gadgets/ifr?nocache=1&url=http://iamac115.epfl.ch/untitled.xml"
+    width="1000" height="500" frameBorder="0"></iframe>
+
+<div class="container">
     <button class="btn" ng-click="saveData()">
         Save Data
     </button>
@@ -38,6 +54,7 @@
 <script type="text/javascript" src="js/lib/angular.js"></script>
 <script type="text/javascript" src="js/lib/bootstrap.js"></script>
 <script type="text/javascript" src="js/lib/modernizr-latest.js"></script>
+<script type="text/javascript" src="js/lib/bootstrap-slider.js"></script>
 <script type="text/javascript" src="js/app/web-socket-controller.js"></script>
 <script type="text/javascript" src="js/app/app.js"></script>
 
